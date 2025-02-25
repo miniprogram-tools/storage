@@ -2,43 +2,60 @@
 
 ## 安装
 
-<VueMasteryLogoLink for="pinia-cheat-sheet">
-</VueMasteryLogoLink>
-
 ```bash
 npm add @miniprogram-util/storage
 ```
 
 # 基础用法
 
-## 创建实例
+## 创建公共实例
 
 ```js {2,5-6,8}
-import { createStorage } from '@miniprogram-util/storage';
+import { createStorage, wxAdapter } from '@miniprogram-util/storage';
 
 // 创建存储实例
-const storage = createStorage();
+const storage = createStorage({ adapter: wxAdapter });
 
 // 存储数据
 storage.setItem('name', 'John');
 
 // 读取数据
-const name = storage.getItem < string > 'name';
+const name = storage.getItem('name');
 
 // 设置带过期时间的数据（5秒后过期）
 storage.setItem('token', 'xxx', 5000);
 ```
 
-## 创建实例
+## 创建独立数据空间的实例
 
 ```js {1,3-4,12}
 import { createStorage } from '@miniprogram-util/storage';
-// 默认实例
-const storage = createStorage();
 
-// 带前缀的实例
-const userStorage = createStorage({ prefix: 'user' });
+const settingsStorage = createStorage({ id: 'settings', adapter: wxAdapter });
 
-// 独立数据空间的实例
-const settingsStorage = createStorage({ id: 'settings' });
+settingsStorage.setItem('key,'value');
+
+settingsStorage.getItem('key');
+```
+
+## 创建带前缀的实例
+
+```js
+const userStorage = createStorage({ prefix: 'user', adapter: wxAdapter });
+
+
+userStorage.setItem('key,'value');
+
+userStorage.getItem('key');
+
+```
+
+## 使用全局缓存
+
+```js
+const storage = createStorage({ adapter: wxAdapter });
+
+storage.cache.set('key', 'value');
+
+storage.cache.get('key', 'value');
 ```

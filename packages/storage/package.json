@@ -1,42 +1,41 @@
 {
-    "name": "@miniprogram-util/storage",
-    "version": "1.0.0",
-    "type": "module",
-    "miniprogram": "dist",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": {
-                "development": "./src/index.ts",
-                "production": "./dist/index.js",
-                "default": "./dist/index.js"
-            },
-            "require": {
-                "development": "./dist/index.cjs",
-                "production": "./dist/index.cjs",
-                "default": "./dist/index.cjs"
-            },
-            "types": "./dist/index.d.ts"
-        }
-    },
-    "files": [
-        "dist",
-        "src"
-    ],
-    "scripts": {
-        "dev": "vite build --watch",
-        "build": "vite build",
-        "type-check": "tsc --noEmit"
-    },
-    "buildOptions": {
-        "name": "MiniprogramStorage",
-        "formats": [
-            "es",
-            "cjs"
-        ],
-        "entry": "src/index.ts"
-    },
-    "publishConfig": {
-        "access": "public"
+  "name": "@miniprogram-util/storage",
+  "version": "1.0.5",
+  "type": "module",
+  "miniprogram": "dist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miniprogramjs/miniprogram-util"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "development": "./src/index.ts",
+        "production": "./dist/index.js",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "development": "./dist/index.cjs",
+        "production": "./dist/index.cjs",
+        "default": "./dist/index.cjs"
+      },
+      "types": "./dist/index.d.ts"
     }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "buildOptions": {
+    "name": "MiniprogramStorage",
+    "formats": [
+      "es",
+      "cjs"
+    ],
+    "entry": "src/index.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
