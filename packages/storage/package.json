@@ -1,6 +1,6 @@
 {
   "name": "@miniprogram-tools/storage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "miniprogram": "dist",
   "repository": {
