@@ -4,8 +4,12 @@
         "moduleResolution": "node",
         "baseUrl": "../..",
         "paths": {
-            "@miniprogram-util/storage": ["packages/storage/src"]
+            "@miniprogram-tools/storage": [
+                "packages/storage/src"
+            ]
         }
     },
-    "include": ["wx-miniprogram/**/*.ts"]
+    "include": [
+        "wx-miniprogram/**/*.ts"
+    ]
 }

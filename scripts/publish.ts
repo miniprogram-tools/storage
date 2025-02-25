@@ -28,10 +28,7 @@ function showDirectoryStructure(dir: string, prefix = ''): void {
         const newPrefix = prefix + (isLast ? '└── ' : '├── ');
         console.log(newPrefix + file.name);
         if (file.isDirectory()) {
-            showDirectoryStructure(
-                resolve(dir, file.name),
-                prefix + (isLast ? '    ' : '│   ')
-            );
+            showDirectoryStructure(resolve(dir, file.name), prefix + (isLast ? '    ' : '│   '));
         }
     });
 }
@@ -44,7 +41,7 @@ try {
     // 复制打包结果到 dist 目录
     const distDir = resolve(__dirname, '../packages/storage/dist');
     const files = readdirSync(distDir);
-    files.forEach(file => {
+    files.forEach((file) => {
         copyFileSync(resolve(distDir, file), resolve(versionDir, 'dist', file));
     });
 
@@ -77,7 +74,7 @@ readline.question('\n确认发布? (y/n) ', (answer: string) => {
     if (answer.toLowerCase() === 'y') {
         // 发布包
         execSync('cd packages/storage && npm publish', { stdio: 'inherit' });
-        console.log(`\n✅ Published @miniprogram-util/storage@${pkgJson.version}`);
+        console.log(`\n✅ Published @miniprogram-tools/storage@${pkgJson.version}`);
     } else {
         console.log('\n❌ 取消发布');
     }

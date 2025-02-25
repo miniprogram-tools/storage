@@ -1,4 +1,4 @@
-import { createStorage, wxAdapter } from '@miniprogram-util/storage';
+import { createStorage, wxAdapter } from '@miniprogram-tools/storage';
 
 // 创建默认存储实例
 const storage = createStorage({ adapter: wxAdapter });

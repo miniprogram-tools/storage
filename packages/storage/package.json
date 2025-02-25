@@ -1,11 +1,11 @@
 {
-  "name": "@miniprogram-util/storage",
+  "name": "@miniprogram-tools/storage",
   "version": "1.0.5",
   "type": "module",
   "miniprogram": "dist",
   "repository": {
     "type": "git",
-    "url": "https://github.com/miniprogramjs/miniprogram-util"
+    "url": "https://github.com/miniprogram-tools/storage"
   },
   "types": "./dist/index.d.ts",
   "exports": {
@@ -23,9 +23,15 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "keywords": [
+    "wxchat",
+    "storage",
+    "cache",
+    "miniprogram-tools"
+  ],
   "files": [
     "dist",
-    "src"
+    "README.md"
   ],
   "buildOptions": {
     "name": "MiniprogramStorage",

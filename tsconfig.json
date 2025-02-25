@@ -24,7 +24,7 @@
       "node"
     ],
     "paths": {
-      "@miniprogram-util/storage": [
+      "@miniprogram-tools/storage": [
         "packages/storage/src"
       ]
     }

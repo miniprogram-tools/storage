@@ -12,7 +12,7 @@ hero:
           link: /getting-started
         - theme: alt
           text: 在 GitHub 上查看
-          link: https://github.com/your-repo/miniprogram-util
+          link: https://github.com/miniprogram-tools/storage
 
 features:
     - icon: 📦

@@ -10,7 +10,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            '@miniprogram-util/storage': resolve(__dirname, 'packages/storage/src'),
+            '@miniprogram-tools/storage': resolve(__dirname, 'packages/storage/src'),
         },
     },
 });

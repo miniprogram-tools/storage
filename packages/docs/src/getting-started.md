@@ -3,7 +3,7 @@
 ## 安装
 
 ```bash
-npm add @miniprogram-util/storage
+npm add @miniprogram-tools/storage
 ```
 
 # 基础用法
@@ -11,7 +11,7 @@ npm add @miniprogram-util/storage
 ## 创建公共实例
 
 ```js {2,5-6,8}
-import { createStorage, wxAdapter } from '@miniprogram-util/storage';
+import { createStorage, wxAdapter } from '@miniprogram-tools/storage';
 
 // 创建存储实例
 const storage = createStorage({ adapter: wxAdapter });
@@ -29,7 +29,7 @@ storage.setItem('token', 'xxx', 5000);
 ## 创建独立数据空间的实例
 
 ```js {1,3-4,12}
-import { createStorage } from '@miniprogram-util/storage';
+import { createStorage } from '@miniprogram-tools/storage';
 
 const settingsStorage = createStorage({ id: 'settings', adapter: wxAdapter });
 

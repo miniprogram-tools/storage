@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-npm add @miniprogram-util/storage
+npm add @miniprogram-tools/storage
 ```
 
 ## 使用示例
@@ -23,7 +23,7 @@ npm add @miniprogram-util/storage
 ### 基础用法
 
 ```typescript
-import { createStorage, wxAdapter } from '@miniprogram-util/storage';
+import { createStorage, wxAdapter } from '@miniprogram-tools/storage';
 
 // 创建存储实例
 const storage = createStorage({ adapter: wxAdapter });

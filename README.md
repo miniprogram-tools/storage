@@ -5,7 +5,7 @@
 ## 目录结构
 
 ```
-miniprogram-util/
+miniprogram-tools/
 ├── packages/
 │   ├── storage/          # 存储工具
 │   ├── docs/            # 文档
