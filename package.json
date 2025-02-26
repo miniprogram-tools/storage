@@ -10,8 +10,7 @@
     "lint": "eslint --fix \"packages/*/{src,__tests__}/**/*.{ts,tsx}\"",
     "format": "prettier --write \"packages/**/*.{ts,tsx,json,md}\"",
     "docs:dev": "pnpm --filter ./packages/docs dev",
-    "docs:build": "pnpm --filter ./packages/docs build",
-    "publish": "tsx scripts/publish.ts"
+    "docs:build": "pnpm --filter ./packages/docs build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
